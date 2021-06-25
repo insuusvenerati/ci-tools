@@ -4,7 +4,7 @@ ADD scripts /scripts
 RUN chmod +x /scripts/environment.sh \
   && apt update \
   && apt upgrade -y \
-  && apt install -y curl jq wget \
+  && apt install -y curl jq wget git \
   && curl -sL https://sentry.io/get-cli/ | bash \
   && curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash \
   && wget https://github.com/mikefarah/yq/releases/download/v4.9.6/yq_linux_amd64 \
