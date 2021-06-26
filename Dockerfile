@@ -7,6 +7,7 @@ RUN chmod +x /scripts/environment.sh \
   && apt install -y curl jq wget git \
   && curl -sL https://sentry.io/get-cli/ | bash \
   && curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash \
+  && helm plugin install https://github.com/chartmuseum/helm-push.git \
   && wget https://github.com/mikefarah/yq/releases/download/v4.9.6/yq_linux_amd64 \
   && mv yq_linux_amd64 /usr/bin/yq \
   && chmod +x /usr/bin/yq \
