@@ -4,7 +4,7 @@ ADD scripts /scripts
 RUN chmod +x /scripts/environment.sh \
   && apt update \
   && apt upgrade -y \
-  && apt install -y curl jq wget git \
+  && apt install -y curl jq wget git build-essential \
   && curl -sL https://sentry.io/get-cli/ | bash \
   && curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash \
   && helm plugin install https://github.com/chartmuseum/helm-push.git \
@@ -13,7 +13,8 @@ RUN chmod +x /scripts/environment.sh \
   && chmod +x /usr/bin/yq \
   && wget https://github.com/roboll/helmfile/releases/download/v0.139.9/helmfile_linux_amd64 \
   && mv helmfile_linux_amd64 /usr/bin/helmfile \
-  && chmod +x /usr/bin/helmfile \
-  && npm i -g semantic-release firebase-tools firebase-ci
+  && chmod +x /usr/bin/helmfile
+
+RUN npm i -g --unsafe-perm semantic-release firebase-tools firebase-ci
 
 CMD [ "/bin/bash" ]
