@@ -16,6 +16,4 @@ RUN npm i -g --unsafe-perm semantic-release firebase-tools firebase-ci
 
 RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-RUN --mount=type=ssh git clone git@github.com:insuusvenerati/ci-tools.git
-
 CMD [ "/bin/bash" ]
