@@ -4,13 +4,13 @@ name: default
 
 steps:
   - name: docker build
-    image: plugins/docker
+    image: stiforr/docker-plugin:20.10
     settings:
       username:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      repo: stiforr/treats-portfolio
+      repo: stiforr/ci-tools
       auto_tag: true
       tags:
         - latest
