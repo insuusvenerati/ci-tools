@@ -4,7 +4,7 @@ name: default
 
 steps:
   - name: docker build
-    image: stiforr/docker-plugin:20.10
+    image: stiforr/docker-plugin:20.10-3
     settings:
       username:
         from_secret: docker_username
@@ -14,3 +14,4 @@ steps:
       auto_tag: true
       tags:
         - latest
+      mount_ssh: true
