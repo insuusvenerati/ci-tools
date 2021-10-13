@@ -9,8 +9,8 @@ echo "---Cloning charts repo---"
 git clone git@github.com:insuusvenerati/charts.git
 
 echo "---Moving ${CHART_TARBALL} to charts repo---"
-mv "${CHART_TARBALL}" ./charts
-cd ./charts/docs || exit
+mv "${CHART_TARBALL}" ./charts/docs
+cd ./charts || exit
 
 echo "---Updating repo index---"
 helm repo index docs --url https://insuusvenerati.github.io/charts/
