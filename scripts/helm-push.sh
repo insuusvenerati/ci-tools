@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 CHART_VERSION=$(yq eval '.version' k8s/treats-portfolio/Chart.yaml)
 CHART_TARBALL="${DRONE_REPO_NAME}"-"${CHART_VERSION}".tgz
 
