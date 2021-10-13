@@ -7,12 +7,12 @@ CHART_TARBALL="${DRONE_REPO_NAME}"-"${CHART_VERSION}".tgz
 
 echo "---Chart version: ${CHART_VERSION}---"
 
-echo "---Cloning charts repo---"
-git clone git@github.com:insuusvenerati/charts.git
+# echo "---Cloning charts repo---"
+# git clone git@github.com:insuusvenerati/charts.git
 
 echo "---Moving ${CHART_TARBALL} to charts repo---"
-mv "${CHART_TARBALL}" ./charts/docs
-cd ./charts || exit
+mv "${CHART_TARBALL}" /charts/docs
+cd /charts || exit
 
 echo "---Updating repo index---"
 helm repo index docs --url https://insuusvenerati.github.io/charts/
