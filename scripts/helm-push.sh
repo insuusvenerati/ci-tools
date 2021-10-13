@@ -10,10 +10,13 @@ git clone https://github.com/insuusvenerati/charts.git
 
 echo "Moving ${CHART_TARBALL} to charts repo"
 mv "${CHART_TARBALL}" ./charts
-cd ./charts || exit
+cd ./charts/docs || exit
+
+helm repo index docs --url https://insuusvenerati.github.io/charts/
 
 echo "Adding ${CHART_TARBALL} and commiting to repo"
-git add "${CHART_TARBALL}"
+git add -A
 git commit -m "${DRONE_REPO_NAME} update app version to ${CHART_VERSION}"
+git push -u origin main
 
 echo "Done"
