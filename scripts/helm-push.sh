@@ -14,6 +14,6 @@ cd ./charts || exit
 
 echo "Adding ${CHART_TARBALL} and commiting to repo"
 git add "${CHART_TARBALL}"
-git commit -m "${DRONE_REPO_NAME}" update app version to "${CHART_VERSION}"
+git commit -m "${DRONE_REPO_NAME} update app version to ${CHART_VERSION}"
 
 echo "Done"
