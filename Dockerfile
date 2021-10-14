@@ -12,6 +12,8 @@ RUN chmod +x /scripts/environment.sh \
   && mv yq_linux_amd64 /usr/bin/yq \
   && chmod +x /usr/bin/yq
 
+ENV HELM_EXPERIMENTAL_OCI=1
+
 RUN npm i -g --unsafe-perm semantic-release firebase-tools firebase-ci
 
 # RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
