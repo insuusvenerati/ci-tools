@@ -3,23 +3,16 @@
 set -e
 
 CHART_VERSION=$(yq eval '.version' k8s/treats-portfolio/Chart.yaml)
-CHART_TARBALL="${DRONE_REPO_NAME}"-"${CHART_VERSION}".tgz
+CHART_NAME=$(yq eval '.name' k8s/treats-portfolio/Chart.yaml)
+CHART_TARBALL="${CHART_NAME}"-"${CHART_VERSION}".tgz
 
 echo "---Chart version: ${CHART_VERSION}---"
+echo "---Chart file: ${CHART_TARBALL}---"
 
-# echo "---Cloning charts repo---"
-# git clone git@github.com:insuusvenerati/charts.git
+echo "---Logging into Helm OCI Registry---"
+helm registry login -u "${REGISTRY_USERNAME}" -p "${REGISTRY_PASSWORD}" https://registry.k8s.stiforr.tech
 
-echo "---Moving ${CHART_TARBALL} to charts repo---"
-mv "${CHART_TARBALL}" /charts/docs
-cd /charts || exit
-
-echo "---Updating repo index---"
-helm repo index docs --url https://insuusvenerati.github.io/charts/
-
-echo "---Adding ${CHART_TARBALL} and commiting to repo---"
-git add -A
-git commit -m "${DRONE_REPO_NAME} update app version to ${CHART_VERSION}"
-git push -u origin main
+echo "---Pushing chart to OCI Registry---"
+helm push "${CHART_TARBALL}" https://registry.k8s.stiforr.tech/stiforr/"${CHART_NAME}":"${CHART_VERSION}"
 
 echo "Done"
