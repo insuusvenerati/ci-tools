@@ -9,10 +9,9 @@ CHART_TARBALL="${CHART_NAME}"-"${CHART_VERSION}".tgz
 echo "---Chart version: ${CHART_VERSION}---"
 echo "---Chart file: ${CHART_TARBALL}---"
 
-echo "---Logging into Helm OCI Registry---"
-helm registry login -u "${REGISTRY_USERNAME}" -p "${REGISTRY_PASSWORD}" https://registry.k8s.stiforr.tech --debug
+helm repo add ${CHART_REPO_NAME} ${CHART_REPO_URL}
 
 echo "---Pushing chart to OCI Registry---"
-helm push "${CHART_TARBALL}" https://registry.k8s.stiforr.tech/stiforr/"${CHART_NAME}":"${CHART_VERSION}"
+helm s3 push "${CHART_TARBALL}" ${CHART_REPO_NAME}
 
 echo "Done"
