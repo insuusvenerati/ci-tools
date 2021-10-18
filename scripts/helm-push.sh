@@ -8,9 +8,9 @@ CHART_TARBALL="${CHART_NAME}"-"${CHART_VERSION}".tgz
 CHART_REPO_NAME=${CHART_NAME}
 
 echo "---Chart version: ${CHART_VERSION}---"
-echo "---Chart file: ${CHART_TARBALL}---"
-echo "---Chart file: ${CHART_REPO_URL}---"
-echo "---Chart file: ${CHART_REPO_NAME}---"
+echo "---Chart tarball: ${CHART_TARBALL}---"
+echo "---Chart repo: ${CHART_REPO_URL}---"
+echo "---Chart repo name: ${CHART_REPO_NAME}---"
 
 helm repo add ${CHART_REPO_NAME} ${CHART_REPO_URL}
 
