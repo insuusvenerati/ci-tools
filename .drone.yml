@@ -21,3 +21,6 @@ steps:
     commands:
       - yarn install
       - yarn semantic-release
+    environment:
+      GH_TOKEN:
+        from_secret: GH_TOKEN
