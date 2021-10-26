@@ -1,0 +1,25 @@
+{
+  "name": "citools",
+  "packageManager": "yarn@3.1.0",
+  "version": "0.0.8",
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/insuusvenerati/ci-tools.git"
+  },
+  "devDependencies": {
+    "semantic-release": "^18.0.0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  }
+}
