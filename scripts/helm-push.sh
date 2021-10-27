@@ -15,6 +15,6 @@ echo "---Chart repo name: ${CHART_REPO_NAME}---"
 helm repo add ${CHART_REPO_NAME} ${CHART_REPO_URL}
 
 echo "---Pushing chart to OCI Registry---"
-helm cm-push "${CHART_TARBALL}" ${CHART_NAME}
+helm cm-push "${CHART_TARBALL}" ${CHART_REPO_NAME}
 
 echo "Done"
