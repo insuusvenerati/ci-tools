@@ -1,6 +1,6 @@
 .cache_ggshield
-.pnp.*
 .yarn/*
+!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases

@@ -1,5 +1,5 @@
 kind: pipeline
-type: kubernetes
+type: docker
 name: default
 
 steps:
@@ -24,3 +24,5 @@ steps:
     environment:
       GH_TOKEN:
         from_secret: GH_TOKEN
+    depends_on:
+      - "docker build"

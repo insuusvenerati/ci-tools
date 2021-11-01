@@ -9,9 +9,6 @@
     "type": "git",
     "url": "https://github.com/insuusvenerati/ci-tools.git"
   },
-  "devDependencies": {
-    "semantic-release": "^18.0.0"
-  },
   "release": {
     "branches": [
       "main"
@@ -31,5 +28,9 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^18.0.0"
   }
 }

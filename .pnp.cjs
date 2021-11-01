@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@semantic-release/git", "virtual:3fd55b5cdd7ae95b80192e40314697da408c552619cc4b8e018827f15d1a19bea218697a4fec38c1f12faed1d06408b3ed56bb7b43db9fd0d95f43813c404f24#npm:10.0.1"],
             ["semantic-release", "npm:18.0.0"]
           ],
           "linkType": "SOFT",
@@ -551,6 +552,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@semantic-release-error-npm-3.0.0-238eebf38b-29c4391ecb.zip/node_modules/@semantic-release/error/",
           "packageDependencies": [
             ["@semantic-release/error", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@semantic-release/git", [
+        ["npm:10.0.1", {
+          "packageLocation": "./.yarn/cache/@semantic-release-git-npm-10.0.1-2fa2e024e6-b0a346acaf.zip/node_modules/@semantic-release/git/",
+          "packageDependencies": [
+            ["@semantic-release/git", "npm:10.0.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:3fd55b5cdd7ae95b80192e40314697da408c552619cc4b8e018827f15d1a19bea218697a4fec38c1f12faed1d06408b3ed56bb7b43db9fd0d95f43813c404f24#npm:10.0.1", {
+          "packageLocation": "./.yarn/__virtual__/@semantic-release-git-virtual-f8d828d1b5/0/cache/@semantic-release-git-npm-10.0.1-2fa2e024e6-b0a346acaf.zip/node_modules/@semantic-release/git/",
+          "packageDependencies": [
+            ["@semantic-release/git", "virtual:3fd55b5cdd7ae95b80192e40314697da408c552619cc4b8e018827f15d1a19bea218697a4fec38c1f12faed1d06408b3ed56bb7b43db9fd0d95f43813c404f24#npm:10.0.1"],
+            ["@semantic-release/error", "npm:3.0.0"],
+            ["@types/semantic-release", null],
+            ["aggregate-error", "npm:3.1.0"],
+            ["debug", "virtual:26bef7164f48d044764cd43116294384229ad2f2c35b46556537f1ef43382b779f272bad9f935bedb8d5f0cd3bb5d71fbb788a0376f8f210aee6a1927e0d4392#npm:4.3.2"],
+            ["dir-glob", "npm:3.0.1"],
+            ["execa", "npm:5.1.1"],
+            ["lodash", "npm:4.17.21"],
+            ["micromatch", "npm:4.0.4"],
+            ["p-reduce", "npm:2.1.0"],
+            ["semantic-release", "npm:18.0.0"]
+          ],
+          "packagePeers": [
+            "@types/semantic-release",
+            "semantic-release"
           ],
           "linkType": "HARD",
         }]
@@ -1196,6 +1227,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["citools", "workspace:."],
+            ["@semantic-release/git", "virtual:3fd55b5cdd7ae95b80192e40314697da408c552619cc4b8e018827f15d1a19bea218697a4fec38c1f12faed1d06408b3ed56bb7b43db9fd0d95f43813c404f24#npm:10.0.1"],
             ["semantic-release", "npm:18.0.0"]
           ],
           "linkType": "SOFT",
