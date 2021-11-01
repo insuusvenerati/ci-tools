@@ -1,7 +1,7 @@
 {
   "name": "citools",
   "packageManager": "yarn@3.1.0",
-  "version": "0.0.8",
+  "version": "1.0.2",
   "scripts": {
     "semantic-release": "semantic-release"
   },
@@ -9,27 +9,8 @@
     "type": "git",
     "url": "https://github.com/insuusvenerati/ci-tools.git"
   },
-  "release": {
-    "branches": [
-      "main"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/github",
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "package.json",
-            "CHANGELOG.MD"
-          ],
-          "message": "chore(release): [CI SKIP] ${nextRelease.version}\n\n${nextRelease.notes}"
-        }
-      ]
-    ]
-  },
   "dependencies": {
+    "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "semantic-release": "^18.0.0"
   }

@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@semantic-release/changelog", "virtual:3fd55b5cdd7ae95b80192e40314697da408c552619cc4b8e018827f15d1a19bea218697a4fec38c1f12faed1d06408b3ed56bb7b43db9fd0d95f43813c404f24#npm:6.0.1"],
             ["@semantic-release/git", "virtual:3fd55b5cdd7ae95b80192e40314697da408c552619cc4b8e018827f15d1a19bea218697a4fec38c1f12faed1d06408b3ed56bb7b43db9fd0d95f43813c404f24#npm:10.0.1"],
             ["semantic-release", "npm:18.0.0"]
           ],
@@ -507,6 +508,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@octokit/types", "npm:6.34.0"],
             ["@octokit/openapi-types", "npm:11.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@semantic-release/changelog", [
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/cache/@semantic-release-changelog-npm-6.0.1-8829cd6462-a7c999f202.zip/node_modules/@semantic-release/changelog/",
+          "packageDependencies": [
+            ["@semantic-release/changelog", "npm:6.0.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:3fd55b5cdd7ae95b80192e40314697da408c552619cc4b8e018827f15d1a19bea218697a4fec38c1f12faed1d06408b3ed56bb7b43db9fd0d95f43813c404f24#npm:6.0.1", {
+          "packageLocation": "./.yarn/__virtual__/@semantic-release-changelog-virtual-8376f71a59/0/cache/@semantic-release-changelog-npm-6.0.1-8829cd6462-a7c999f202.zip/node_modules/@semantic-release/changelog/",
+          "packageDependencies": [
+            ["@semantic-release/changelog", "virtual:3fd55b5cdd7ae95b80192e40314697da408c552619cc4b8e018827f15d1a19bea218697a4fec38c1f12faed1d06408b3ed56bb7b43db9fd0d95f43813c404f24#npm:6.0.1"],
+            ["@semantic-release/error", "npm:3.0.0"],
+            ["@types/semantic-release", null],
+            ["aggregate-error", "npm:3.1.0"],
+            ["fs-extra", "npm:9.1.0"],
+            ["lodash", "npm:4.17.21"],
+            ["semantic-release", "npm:18.0.0"]
+          ],
+          "packagePeers": [
+            "@types/semantic-release",
+            "semantic-release"
           ],
           "linkType": "HARD",
         }]
@@ -996,6 +1023,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["at-least-node", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/at-least-node-npm-1.0.0-2b36e661fa-463e2f8e43.zip/node_modules/at-least-node/",
+          "packageDependencies": [
+            ["at-least-node", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["aws-sign2", [
         ["npm:0.7.0", {
           "packageLocation": "./.yarn/cache/aws-sign2-npm-0.7.0-656c6cb84d-b148b0bb07.zip/node_modules/aws-sign2/",
@@ -1227,6 +1263,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["citools", "workspace:."],
+            ["@semantic-release/changelog", "virtual:3fd55b5cdd7ae95b80192e40314697da408c552619cc4b8e018827f15d1a19bea218697a4fec38c1f12faed1d06408b3ed56bb7b43db9fd0d95f43813c404f24#npm:6.0.1"],
             ["@semantic-release/git", "virtual:3fd55b5cdd7ae95b80192e40314697da408c552619cc4b8e018827f15d1a19bea218697a4fec38c1f12faed1d06408b3ed56bb7b43db9fd0d95f43813c404f24#npm:10.0.1"],
             ["semantic-release", "npm:18.0.0"]
           ],
@@ -2009,6 +2046,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/fs-extra-npm-10.0.0-4f8c704115-5285a3d8f3.zip/node_modules/fs-extra/",
           "packageDependencies": [
             ["fs-extra", "npm:10.0.0"],
+            ["graceful-fs", "npm:4.2.8"],
+            ["jsonfile", "npm:6.1.0"],
+            ["universalify", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:9.1.0", {
+          "packageLocation": "./.yarn/cache/fs-extra-npm-9.1.0-983c2ddb4c-ba71ba32e0.zip/node_modules/fs-extra/",
+          "packageDependencies": [
+            ["fs-extra", "npm:9.1.0"],
+            ["at-least-node", "npm:1.0.0"],
             ["graceful-fs", "npm:4.2.8"],
             ["jsonfile", "npm:6.1.0"],
             ["universalify", "npm:2.0.0"]
