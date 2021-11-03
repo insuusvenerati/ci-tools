@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/insuusvenerati/ci-tools/compare/1.0.0...1.0.1) (2021-11-03)
+
+
+### Bug Fixes
+
+* adds configurable chart location ([fa8a141](https://github.com/insuusvenerati/ci-tools/commit/fa8a14148b4541c5a13194ca5cf9b1b9c22d63d5))
+
 # 1.0.0 (2021-11-01)
 
 
