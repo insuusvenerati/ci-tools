@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/insuusvenerati/ci-tools/compare/1.0.1...1.0.2) (2021-11-11)
+
+
+### Bug Fixes
+
+* add kubeval to ci-tools ([eb8c542](https://github.com/insuusvenerati/ci-tools/commit/eb8c54296156a14bc3448a4c07b9db608c0a7624))
+
 ## [1.0.1](https://github.com/insuusvenerati/ci-tools/compare/1.0.0...1.0.1) (2021-11-03)
 
 
